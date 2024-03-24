@@ -1,0 +1,30 @@
+
+.App{
+    background-color: blac;
+}
+
+.item{
+    display: flex;
+    gap: 22px;
+    margin: 12px;
+}
+ .item img{
+    width: 250px;
+    height: 220px;
+}
+
+.myList{
+    padding: 2px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    background-color: red;
+}
+
+.Body{
+    display: flex;
+}
+
+

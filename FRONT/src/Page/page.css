@@ -1,0 +1,22 @@
+
+.page{
+    background-color: blak;
+    width: 300px;
+    height: auto;
+    border: 3px solid black;
+    margin: 0 0 0 12px;
+    
+}
+.img{
+    height: 350px;
+    width: 100%;
+    display: block;
+}
+
+.List{
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}

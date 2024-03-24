@@ -1,0 +1,7 @@
+
+.myheader{
+    display: flex;
+    gap: 33px;
+    justify-content: space-between;
+    margin-left: 44px;
+}
