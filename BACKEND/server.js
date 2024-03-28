@@ -2,8 +2,7 @@ const express=require('express')
  
 
 const app=express()
-
-
+app.use(express.urlencoded({ extended: true})); //Allows us to get request body
 
 
 let index = require('./routes/index');
