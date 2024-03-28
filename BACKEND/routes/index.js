@@ -1,5 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const FarmerData=require('../models/Farmer')
+const RetailerData=require('../models/retailer')
+const GoodsData=require('../models/goods')
+const paymentData=require('../models/payment')
+
 
 router.use(express.urlencoded({ extended: true})); //Allows us to get request body
 
@@ -34,16 +39,15 @@ router.get('/payment',(req,res)=>{
 
 
 
-// SAVING THE FORM DATA TO THE DATABASE
-router.post('/data', (req,res)=>{
+// SAVING THE FARMER DATA TO THE DATABASE
+router.post('/Fdata', (req,res)=>{
 
-    let data =new Reg(req.body) //Reg is schema
+    let data =new FarmerData(req.body) //FarmerData  is schema
 
     data.save()
        .then((result)=>{
-        // res.redirect("/all-blogs")
-        res.redirect('/login')
-        console.log(result)
+         res.redirect('/login')
+         console.log(result)
 
        })
        .catch((err)=>{
@@ -52,4 +56,18 @@ router.post('/data', (req,res)=>{
 
  
  })
+
+//  SAVING RETAILER DATA TO THE DATABASE
+router.post('Rdata',(req,res)=>{
+    let data=new RetailerData(req.body) //RetailerData is a schema
+
+    data.save()
+      .then((result)=>{
+         res.redirect('login')
+         console.log(result)
+      })
+   .catch(err=> console.log(err))
+})
+
+
 module.exports=router;
